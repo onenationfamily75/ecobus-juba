@@ -840,5 +840,20 @@
 
   document.getElementById('travelDate').min = new Date().toISOString().split('T')[0];
 </script>
+  <!-- Eco Bus Purchase Conversion -->
+<script>
+function fireEcoBusPurchase() {
+  gtag('event', 'conversion', {
+      'send_to': 'AW-18415699588/eB5GCLnuuOscEISNpc1E',
+      'transaction_id': ''
+  });
+  console.log('Eco Bus purchase tracked');
+}
+
+// Auto-fire if URL contains success
+if (window.location.href.includes('success') || window.location.href.includes('thank')) {
+  fireEcoBusPurchase();
+}
+</script>
 </body>
 </html>
